@@ -2,6 +2,7 @@
 A Ballroom Competition Platform for all the parties involved in the organization and the running of the event. Created as a CS32 final project by Kamil K.
 
 **Projet component outline:**
+
 Competitor side:
 -	Account registration that will be remembered (username & password that can be used across competitions)
 -	Signing up for competitions (choosing a competition from the list of available, choosing the desired level (bronze, silver etc.) and styles to compete in (jive, cha cha etc.)
@@ -27,6 +28,7 @@ Observer side:
 -	A screen showing the current and upcoming heats and the competitors in each of them, so that the competitors know if they have moved onto the next round.
 
 **Initially chosen computational tasks:**
+
 1.	Creating a system for the organizer to create competitions (through a server database of competitions and some system of classes that can be instantiated as competitions)
 2.	Creating a system for a competitor to register through
 a.	Some system of account registration (to be researched? Not expecting any breakthroughs in the encryption of user details, just a simple system)
