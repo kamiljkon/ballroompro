@@ -19,8 +19,8 @@ Server side:
 -	Confirming registration of couples, adding them to the list of competitors for select level/style combinations
 -	Sorting competitors into heats (if a level/style has e.g. 24 participants and only 8 can dance at one time, they should be sorted into heats of 8 or whatever number that works best so that every heat has an approximately equal number of competitors)
 -	Starting a heat, collecting the information from the judges
-o	Once the rankings from the judges have been collected, first summarizing all the results to determine which dancers have moved to the following heat
-o	Then, giving the organizer a green light to approve the heat and move onto the next one
+--	Once the rankings from the judges have been collected, first summarizing all the results to determine which dancers have moved to the following heat
+-- Then, giving the organizer a green light to approve the heat and move onto the next one
 -	After all the heats have been finished, summarizing the results in a spreadsheet format or some other
 
 Observer side:
