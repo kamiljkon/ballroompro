@@ -1,5 +1,5 @@
 # ballroompro
-A Ballroom Competition Platform for all the parties involved in the organization and the running of the event.
+A Ballroom Competition Platform for all the parties involved in the organization and the running of the event. Created as a CS32 final project by Kamil K.
 
 **Projet component outline:**
 Competitor side:
