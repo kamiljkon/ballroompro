@@ -1,0 +1,29 @@
+{
+    "HBEG_2024": [
+        {
+            "name": "Harvard Beginners",
+            "start date": "2024-06-06",
+            "end date": "2024-06-06",
+            "registration close": "2024-06-03",
+            "directory": "\\HBEG_2024"
+        }
+    ],
+    "TUFI_2024": [
+        {
+            "name": "Tufts Invitational",
+            "start date": "2024-05-20",
+            "end date": "2024-05-20",
+            "registration close": "2024-05-15",
+            "directory": "TUFI_2024"
+        }
+    ],
+    "BRWN_2024": [
+        {
+            "name": "Brown Comp",
+            "start date": "2024-04-20",
+            "end date": "2024-04-20",
+            "registration close": "2024-04-19",
+            "directory": "BRWN_2024"
+        }
+    ]
+}
