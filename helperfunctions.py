@@ -4,9 +4,14 @@ def getinput(type, instring, maxval=None):
     """
     Makes input processing easier by condensing the try/except code
     into one function. 
-    'type' parameter takes in the type of the
-    input desired (integer, boolean etc.)
-    'input' takes in the desired string to be printed.
+
+    Args:
+        type (str) -> takes in type of input desired (integer, boolean etc.)
+        instring (str) -> the string to be printed
+        maxval (int, def=None) -> for xchoices type, selects maximum value
+
+    Returns:
+        choice
     """
 
     if type == "y/n":
@@ -56,3 +61,19 @@ def getinput(type, instring, maxval=None):
                     raise ValueError
             except ValueError:
                 print("Invalid format, please try again.")
+
+def findkey(dict, target_value):
+    """
+    Helps find the corresponding key to a value, such as userid.
+
+    Args:
+        dict (dict) -> the dictionary to be searched
+        target_value () -> the value searched for
+    
+    Returns:
+        key (str) -> the key corresponding to the value
+    """
+    for key, value in dict.items():
+        if value == target_value:
+            return key
+    return None

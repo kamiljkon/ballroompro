@@ -11,6 +11,13 @@ class Competition():
     def create_competition(self, useremail):
         """
         Function to create a new competition and initialize the basic information.
+
+        Args:
+            useremail (str) -> the email of the organizing user
+
+        Returns:
+            appends competitionsdata.json
+            directory for the competition (format: COMPCODE_YEAR)
         """
         print("### CREATING A COMPETITION ###")
         comp_name = input("What is the name of your competition?: ")
@@ -31,7 +38,7 @@ class Competition():
             pass
         else:
             filename = comp_code + "_" + start_date[:4]
-            newpath = f"{filename}"
+            newpath = f"comps/{filename}"
             os.makedirs(newpath)
             comp_details = {
                 "name": comp_name,
@@ -57,7 +64,18 @@ class Competition():
         with open("userdata.json", "w") as f:
             json.dump(f_data, f, indent=4)
 
+
     def add_dances(self, useremail):
+        """
+        Function to add dances to an existing competition.
+
+        Args:
+            useremail (str) -> email of the current user
+
+        Returns:
+            .json file for every style (format: LEVEL_STYLE)
+
+        """
         mod_comp = input("Enter the competition code of the comp you wish to modify [ABCD_YYYY]: ")
         with open("userdata.json", "r") as f:
             f_data = json.load(f)
@@ -87,7 +105,6 @@ class Competition():
             if category == 404: return None
             category = dance_categories[category-1]
 
-            dancelist = []
             while True:
                 print("## CHOOSE DANCES TO ADD ##")
                 if category == latin_dances:

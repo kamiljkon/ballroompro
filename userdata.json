@@ -1,10 +1,26 @@
 {
-    "admin@gmail.com": [
-        [
-            "81dc9bdb52d04dc20036dbd8313ed055",
-            [
-                "BRWN_2024"
-            ]
-        ]
-    ]
+    "pat@hotmail.com": {
+        "email": "pat@hotmail.com",
+        "name": "josh patinsky",
+        "userid": "7a6a73cf-bd26-44f9-817d-f15da6f06c2d",
+        "account_type": "competitor",
+        "password": "331df9fffdadc4b0fe9a27362f7c449f",
+        "authorized_comps": []
+    },
+    "ellie@gmail.com": {
+        "email": "ellie@gmail.com",
+        "name": "elle woods",
+        "userid": "4983659a-28d5-4501-88f8-ac631d189872",
+        "account_type": "competitor",
+        "password": "81dc9bdb52d04dc20036dbd8313ed055",
+        "authorized_comps": []
+    },
+    "pomdance@fastmail.com": {
+        "email": "pomdance@fastmail.com",
+        "name": "patrice woods",
+        "userid": "ed9a78ce-6df8-4392-b0f3-a3417875d0f7",
+        "account_type": "competitor",
+        "password": "b7bfb94927c40577c1019e0084d73297",
+        "authorized_comps": []
+    }
 }

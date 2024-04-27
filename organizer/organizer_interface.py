@@ -1,4 +1,4 @@
-from organizer_backend import Competition
+from organizer.organizer_backend import Competition
 from helperfunctions import getinput
 from accountmanagement import signup, login
 
@@ -12,7 +12,7 @@ def main():
         print("[1]. Register\n[2]. Login\n")
         menuchoice = getinput("xchoices", "Select one of the options above: ", 2)
         if menuchoice == 1:
-            signup()
+            signup("organizer")
         if menuchoice == 2:
             useremail, loginstatus = login()
             print(useremail, loginstatus)
