@@ -8,7 +8,7 @@ def getinput(type, instring, maxval=None):
     Args:
         type (str) -> takes in type of input desired (integer, boolean etc.)
         instring (str) -> the string to be printed
-        maxval (int, def=None) -> for xchoices type, selects maximum value
+        maxval (int, def=None) -> for xchoices type, selects maximum value; for mulchoice, selects number of expected choices
 
     Returns:
         choice
@@ -55,10 +55,25 @@ def getinput(type, instring, maxval=None):
             else:
                 output = int(output)
             try:
-                if 0 < output < maxval+1:
-                    return output
+                if maxval == None: 
+                    if 0 <= output:
+                        return output
                 else:
+                    if 0 <= output < maxval+1:
+                        return output
+                    else:
+                        raise ValueError
+            except ValueError:
+                print("Invalid format, please try again.")
+
+    if type == "mulchoice":
+        while True:
+            output = input(instring)
+            try:
+                if output.count(",") != maxval-1:
                     raise ValueError
+                else:
+                    return output
             except ValueError:
                 print("Invalid format, please try again.")
 

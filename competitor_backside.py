@@ -1,46 +1,92 @@
 from helperfunctions import getinput
+from accountmanagement import User, Partnership
 import os, json
+from sqlalchemy import create_engine, ForeignKey, Column, String, Integer, CHAR
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, relationship
+import hashlib
+from organizer_backend import Competition
+Base = declarative_base()
+engine = create_engine("sqlite:///data.db", echo=False)
+Session = sessionmaker(bind=engine)
 
-def new_partnership(userid):
-    print("To create a new partnership, input your partner's and the partnerships details.")
-    print("BEWARE! If you plan switching between leading/following in various styles, you have to create two partnerships.\n")
-    partnername = input("Please input your partner's last name: ")
-    potentialpartners = []
-    with open("userdata.json", "r") as f:
-        f_data = json.load(f)
-        for name in f_data["name"]:
-            if partnername in name:
-                potentialpartners.append((name, f_data["email"], userid))
-        if len(potentialpartners) == 0:
-            print(f"Found no partner with lastname {partnername}.")
-            return None
-        if len(potentialpartners) == 1:
-            print("Found your partner!")
-            partnerid = potentialpartners[0][2]
-        if len(potentialpartners) > 1:
-            for i in len(potentialpartners):
-                print(f"Partner {i}: {potentialpartners[i]}")
-            partnerchoice = getinput("xchoices", "Found multiple partners, please select the correct one from the list: ")
-            partnerid = potentialpartners[partnerchoice][2]
+def new_partnership(useremail):
+    """
+    Function to create new partnerships.
 
-        leadfollow = getinput("Y/N", "Will you be leading [Y] or following [N]?: ")
-        if leadfollow == "Y":
-            partnership = (userid, partnerid)
-        else:
-            partnership = (partnerid, userid)
-    
-    teamname = input("Please state a short team name for your partnership. No spacebars!: ")
-    with open("partnerships.json", "r") as f:
-        f_data = json.load(f)
-        f_data[teamname].append(partnership)
-    with open("partnerships.json", "w") as f:
-        json.dump(f_data, f, indent=4)
+    Args:
+        useremail (str) -> email of the operating user
+
+    Returns:
+        Creates a partnership object and appends the dataset
         
-                
+    """
+    print("\n#######\nTo create a new partnership, input your partner's and the partnerships details.")
+    print("BEWARE! If you plan switching between leading/following in various styles, you have to create two partnerships.\n")
+    
+    partnername = input("Please input your partner's last name: ").lower()
 
+    session = Session()
+    potentialpartners = session.query(User).filter(
+        User.name.like(f"%{partnername}%"),
+        User.account_type == "C").all()
+    if len (potentialpartners) == 0:
+        print(f"Found no partner with lastname {partnername}.")
+        return None      
+    if len(potentialpartners) == 1:
+        print("Found your partner!")
+        for partner in potentialpartners:
+            partneremail = partner.email
+    else:
+        i = 1
+        for partner in potentialpartners:
+            print(f"Partner {i}:\nName: {partner.name}\nEmail: {partner.email}\n")
+            i += 1
+        partnerchoice = getinput("xchoices", "Found multiple partners, please select the correct one from the list: ", i)
+        partneremail = potentialpartners[partnerchoice-1].email
+    
+    print("Please indicate your role in the partnership.")
+    leadfollow = getinput("y/n", "Will you be leading [Y] or following [N]?: ")
+    if leadfollow == "Y":
+        leader_email = useremail
+        follower_email = partneremail
+    else:
+        leader_email = partneremail
+        follower_email = useremail
+    
+    existing_partnership = session.query(Partnership).filter(
+        Partnership.leader_email == leader_email,
+        Partnership.follower_email == follower_email).first()
+    if existing_partnership:
+        print("This partnership already exists.")
+        return None
+    
+    new_partnership = Partnership(
+        leader_email=leader_email,
+        follower_email=follower_email)
+    session.add(new_partnership)
+    session.commit()
+    print("Partnership succesfully added.")
+        
+def add_to_comp():
+    """
+    Function to register a partnership to an existing competition.
 
+    Returns:
+        Appends the .json file of the dance for which the partnership registered.
+    
+    """
+    session = Session()
+    avail_comps = session.query(Competition).all()
+    print("#### AVAILABLE COMPETITIONS ####")
+    for i, comps in enumerate(avail_comps):
+        print(f"{i}. {comps.name}")
+    choice = int(getinput("xchoices", "Which comp do you want to sign up for?: ", i+1))
+    comp = avail_comps[choice].comp_code
 
-def add_to_comp(userid, comp):
+    partnership = int(getinput("xchoices", "State the partnership ID for the partnership you're registering: "))
+    #leader
+
     levels = ['Newcomer', 'Bronze', 'Silver', 'Gold', 'Syllabus', 'Open']
     latin_dances = ['International_ChaCha', 'International_Rumba', 'Jive', 'Paso_Doble', 'Samba']
     rhytm_dances = ['American_ChaCha', 'American_Rumba', 'EastCoast_Swing', 'Bolero', 'Mambo']
@@ -62,34 +108,33 @@ def add_to_comp(userid, comp):
     category = dance_categories[category-1]
 
     while True:
-        dancelist = os.listdir('{comp}/')
+        dancelist = os.listdir(f'comps/{comp}')
         print("## CHOOSE DANCES TO ADD ##")
-        if category == latin_dances:
-            for dance in latin_dances:
-                if f"{level}__{dance}" in dancelist:
-                    i = 1
-                    print(f"{i}. {dance.upper()}")
-                    i += 1
-        if category == rhytm_dances:
-            for dance in latin_dances:
-                if f"{level}__{dance}" in dancelist:
-                    i = 1
-                    print(f"{i}. {dance.upper()}")
-                    i += 1
-        if category == smooth_dances:
-            for dance in latin_dances:
-                if f"{level}__{dance}" in dancelist:
-                    i = 1
-                    print(f"{i}. {dance.upper()}")
-                    i += 1
-        if category == standard_dances:
-            for dance in latin_dances:
-                if f"{level}__{dance}" in dancelist:
-                    i = 1
-                    print(f"{i}. {dance.upper()}")
-                    i += 1
-        if category == 1 or 2:
-            adding_dances = getinput("xchoices", "Choose a dance to add [1-5]. If you wish to return, type [BACK]. If you wish to go back to the main menu, type [EXIT]: ", 5)
-        else:
-            adding_dances = getinput("xchoices", "Choose a dance to add [1-4]. If you wish to return, type [BACK]. If you wish to go back to the main menu, type [EXIT]: ", 4)
-            ### UNFINISHED == CONTINUE FROM HERE
+        available_dances = [dance for dance in category if f"{level}__{dance}" in dancelist]
+
+        for i, dance in enumerate(available_dances, 1):
+            print(f"{i}. {dance.upper()}")
+
+        dance_choice = (getinput("xchoices", "Choose a dance to add. If you wish to return, type [BACK]: ", len(available_dances)))
+        if dance_choice == 404:
+            return None
+        if dance_choice == 304:
+            break
+        selected_dance = available_dances[dance_choice - 1]
+        dance_filename = f"{level}__{selected_dance}"
+        dance_filepath = f"comps/{comp}/{dance_filename}.json"
+
+        if not os.path.exists(dance_filepath):
+            with open(dance_filepath, 'w') as f:
+                json.dump([], f) 
+
+        with open(dance_filepath, 'r+') as f:
+            dance_data = json.load(f)
+            # Modify dance_data as needed
+            if partnership not in dance_data:
+                dance_data.append(partnership) 
+                f.seek(0)
+                json.dump(dance_data, f, indent=4)
+                print(f"Updated {selected_dance} in {comp} successfully!")
+            else:
+                print("You are already registered for the dance!")

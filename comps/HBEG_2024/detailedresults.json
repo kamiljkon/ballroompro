@@ -1,0 +1,295 @@
+{
+    "Event_1": {
+        "event_name": "Quarterfinal_Newcomer__EastCoast_Swing",
+        "kicked_out_competitors": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    "Event_2": {
+        "event_name": "Quarterfinal_Newcomer__International_Waltz",
+        "kicked_out_competitors": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    "Event_3": {
+        "event_name": "Quarterfinal_Newcomer__International_Rumba",
+        "kicked_out_competitors": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    "Event_4": {
+        "event_name": "Quarterfinal_Newcomer__American_Tango",
+        "kicked_out_competitors": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    "Event_5": {
+        "event_name": "Semifinal_Newcomer__EastCoast_Swing",
+        "kicked_out_competitors": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Event_6": {
+        "event_name": "Semifinal_Newcomer__International_Waltz",
+        "kicked_out_competitors": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Event_7": {
+        "event_name": "Semifinal_Newcomer__International_Rumba",
+        "kicked_out_competitors": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Event_8": {
+        "event_name": "Semifinal_Newcomer__American_Tango",
+        "kicked_out_competitors": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "advanced_competitors": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Event_9": {
+        "event_name": "Final_Newcomer__EastCoast_Swing",
+        "kicked_out_competitors": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "advanced_competitors": [
+            1
+        ]
+    },
+    "Event_10": {
+        "event_name": "Final_Newcomer__International_Waltz",
+        "kicked_out_competitors": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "advanced_competitors": [
+            1
+        ]
+    },
+    "Event_11": {
+        "event_name": "Final_Newcomer__International_Rumba",
+        "kicked_out_competitors": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "advanced_competitors": [
+            1
+        ]
+    },
+    "Event_12": {
+        "event_name": "Final_Newcomer__American_Tango",
+        "kicked_out_competitors": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "advanced_competitors": [
+            1
+        ]
+    },
+    "Event_13": {
+        "event_name": "Final_Gold__Paso_Doble",
+        "kicked_out_competitors": [
+            17,
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            1
+        ]
+    },
+    "Event_14": {
+        "event_name": "Final_Gold__American_Waltz",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    },
+    "Event_15": {
+        "event_name": "Final_Gold__American_VWaltz",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    },
+    "Event_16": {
+        "event_name": "Final_Gold__Jive",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    },
+    "Event_17": {
+        "event_name": "Final_Gold__American_Tango",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    },
+    "Event_18": {
+        "event_name": "Final_Gold__American_Foxtrot",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    },
+    "Event_19": {
+        "event_name": "Final_Gold__Samba",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    },
+    "Event_20": {
+        "event_name": "Final_Gold__International_ChaCha",
+        "kicked_out_competitors": [
+            18,
+            19
+        ],
+        "advanced_competitors": [
+            17
+        ]
+    }
+}

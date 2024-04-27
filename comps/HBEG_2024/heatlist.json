@@ -1,0 +1,190 @@
+{
+    "Event_1": {
+        "event_name": "Quarterfinal_Newcomer__EastCoast_Swing",
+        "event_contestants": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ]
+    },
+    "Event_2": {
+        "event_name": "Quarterfinal_Newcomer__International_Waltz",
+        "event_contestants": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ]
+    },
+    "Event_3": {
+        "event_name": "Quarterfinal_Newcomer__International_Rumba",
+        "event_contestants": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ]
+    },
+    "Event_4": {
+        "event_name": "Quarterfinal_Newcomer__American_Tango",
+        "event_contestants": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ]
+    },
+    "Event_5": {
+        "event_name": "Semifinal_Newcomer__EastCoast_Swing",
+        "event_contestants": []
+    },
+    "Event_6": {
+        "event_name": "Semifinal_Newcomer__International_Waltz",
+        "event_contestants": []
+    },
+    "Event_7": {
+        "event_name": "Semifinal_Newcomer__International_Rumba",
+        "event_contestants": []
+    },
+    "Event_8": {
+        "event_name": "Semifinal_Newcomer__American_Tango",
+        "event_contestants": []
+    },
+    "Event_9": {
+        "event_name": "Final_Newcomer__EastCoast_Swing",
+        "event_contestants": []
+    },
+    "Event_10": {
+        "event_name": "Final_Newcomer__International_Waltz",
+        "event_contestants": []
+    },
+    "Event_11": {
+        "event_name": "Final_Newcomer__International_Rumba",
+        "event_contestants": []
+    },
+    "Event_12": {
+        "event_name": "Final_Newcomer__American_Tango",
+        "event_contestants": []
+    },
+    "Event_13": {
+        "event_name": "Final_Gold__Paso_Doble",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_14": {
+        "event_name": "Final_Gold__American_Waltz",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_15": {
+        "event_name": "Final_Gold__American_VWaltz",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_16": {
+        "event_name": "Final_Gold__Jive",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_17": {
+        "event_name": "Final_Gold__American_Tango",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_18": {
+        "event_name": "Final_Gold__American_Foxtrot",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_19": {
+        "event_name": "Final_Gold__Samba",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_20": {
+        "event_name": "Final_Gold__International_ChaCha",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    },
+    "Event_21": {
+        "event_name": "Final_Gold__International_Rumba",
+        "event_contestants": [
+            17,
+            18,
+            19
+        ]
+    }
+}

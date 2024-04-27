@@ -1,0 +1,219 @@
+{
+    "Gold__Paso_Doble": {
+        "Final": [
+            17,
+            18,
+            19
+        ],
+        "Winner": [
+            1
+        ]
+    },
+    "Gold__American_Waltz": {
+        "Final": [
+            18,
+            19
+        ],
+        "Winner": [
+            17
+        ]
+    },
+    "Gold__American_VWaltz": {
+        "Final": [
+            18,
+            19
+        ],
+        "Winner": [
+            17
+        ]
+    },
+    "Gold__Jive": {
+        "Final": [
+            18,
+            19
+        ],
+        "Winner": [
+            17
+        ]
+    },
+    "Newcomer__EastCoast_Swing": {
+        "Quarterfinal": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "Winner": [
+            1
+        ],
+        "Semifinal": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "Final": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Newcomer__International_Waltz": {
+        "Quarterfinal": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "Winner": [
+            1
+        ],
+        "Semifinal": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "Final": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Gold__American_Tango": {
+        "Quarterfinal": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "Winner": [
+            17
+        ],
+        "Semifinal": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "Final": [
+            18,
+            19
+        ]
+    },
+    "Newcomer__International_Rumba": {
+        "Quarterfinal": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "Winner": [
+            1
+        ],
+        "Semifinal": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "Final": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Gold__American_Foxtrot": {
+        "Final": [
+            18,
+            19
+        ],
+        "Winner": [
+            17
+        ]
+    },
+    "Gold__Samba": {
+        "Final": [
+            18,
+            19
+        ],
+        "Winner": [
+            17
+        ]
+    },
+    "Gold__International_ChaCha": {
+        "Final": [
+            18,
+            19
+        ],
+        "Winner": [
+            17
+        ]
+    },
+    "Newcomer__American_Tango": {
+        "Quarterfinal": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "Winner": [
+            1
+        ],
+        "Semifinal": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "Final": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    },
+    "Gold__International_Rumba": {
+        "Quarterfinal": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ],
+        "Winner": [
+            1
+        ],
+        "Semifinal": [
+            8,
+            9,
+            10,
+            7
+        ],
+        "Final": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+}
