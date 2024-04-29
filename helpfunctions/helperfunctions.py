@@ -14,6 +14,9 @@ def getinput(type, instring, maxval=None):
         choice
     """
 
+    if type == " ":
+        return None
+
     if type == "y/n":
         while True:
             output = input(instring)

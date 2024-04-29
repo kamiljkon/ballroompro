@@ -1,7 +1,7 @@
 import datetime
 import json, os
-from helperfunctions import getinput, findkey
-from accountmanagement import User
+from helpfunctions.helperfunctions import getinput, findkey
+from helpfunctions.accountmanagement import User
 from sqlalchemy import create_engine, Column, Integer, String, CHAR, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
@@ -11,7 +11,7 @@ import csv
 
 # Initializing database
 Base = declarative_base()
-engine = create_engine("sqlite:///data.db", echo=False)
+engine = create_engine("sqlite:///data/data.db.db", echo=False)
 Session = sessionmaker(bind=engine)
 
 def check_access(useremail):

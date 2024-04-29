@@ -1,6 +1,6 @@
-from helperfunctions import getinput
-from organizer_interface import org_main
-from competitor_interface import int_main
+from helpfunctions.helperfunctions import getinput
+from organizer.organizer_interface import org_main
+from competitor.competitor_interface import int_main
 
 def main():
     """

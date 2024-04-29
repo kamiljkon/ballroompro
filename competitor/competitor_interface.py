@@ -4,10 +4,10 @@ import json
 
 sys.path.insert(0, "/Users/kamilkon/ballroompro")
 
-from organizer_backend import Competition
-from helperfunctions import getinput, findkey
-from accountmanagement import User, Partnership
-from competitor_backside import new_partnership, add_to_comp
+from organizer.organizer_backend import Competition
+from helpfunctions.helperfunctions import getinput, findkey
+from helpfunctions.accountmanagement import User, Partnership
+from .competitor_backside import new_partnership, add_to_comp
 from sqlalchemy import create_engine, ForeignKey, Column, String, Integer, CHAR
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
@@ -16,7 +16,7 @@ from sqlalchemy.exc import OperationalError
 
 import hashlib
 Base = declarative_base()
-engine = create_engine("sqlite:///data.db", echo=False)
+engine = create_engine("sqlite:///data/data.db", echo=False)
 Session = sessionmaker(bind=engine)
 
 def loginmenu():
@@ -38,6 +38,8 @@ def loginmenu():
             User.signup("C")
         if menuchoice == 2:
             useremail, loginstatus = User.login()
+            if useremail == False:
+                return None
             return useremail, loginstatus
 
 def currentpartnerships(useremail):

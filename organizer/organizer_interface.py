@@ -1,6 +1,6 @@
-from organizer_backend import Competition
-from helperfunctions import getinput
-from accountmanagement import User
+from .organizer_backend import Competition
+from helpfunctions.helperfunctions import getinput
+from helpfunctions.accountmanagement import User
 import sys
 
 def org_main():

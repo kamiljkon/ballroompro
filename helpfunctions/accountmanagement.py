@@ -1,10 +1,10 @@
 from sqlalchemy import create_engine, ForeignKey, Column, String, Integer, CHAR
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
-from helperfunctions import getinput
+from .helperfunctions import getinput
 import hashlib
 Base = declarative_base()
-engine = create_engine("sqlite:///data.db", echo=False)
+engine = create_engine("sqlite:///data/data.db", echo=False)
 Session = sessionmaker(bind=engine)
 
 class User(Base):
@@ -40,7 +40,7 @@ class User(Base):
             interface (str) -> type of account to be created (e.g. organizer, competitor)
         
         Returns:
-            competitionsdata.json
+            object in the database
         """
         email = input("Enter email adress: ")
         name = input("Enter name and surname: ").lower()
@@ -89,7 +89,7 @@ class User(Base):
                 return False
         else:
             print("User not found.")
-            return False
+            return False, False
         
     Base.metadata.create_all(bind=engine)
 

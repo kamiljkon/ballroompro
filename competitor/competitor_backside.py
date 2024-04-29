@@ -1,13 +1,13 @@
-from helperfunctions import getinput
-from accountmanagement import User, Partnership
+from helpfunctions.helperfunctions import getinput
+from helpfunctions.accountmanagement import User, Partnership
 import os, json
 from sqlalchemy import create_engine, ForeignKey, Column, String, Integer, CHAR
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 import hashlib
-from organizer_backend import Competition
+from organizer.organizer_backend import Competition
 Base = declarative_base()
-engine = create_engine("sqlite:///data.db", echo=False)
+engine = create_engine("sqlite:///data/data.db", echo=False)
 Session = sessionmaker(bind=engine)
 
 def new_partnership(useremail):
